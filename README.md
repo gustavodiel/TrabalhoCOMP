@@ -8,7 +8,7 @@
 ## Requisitos
 ### Linux
 ```sh
-sudo apt install bison jasmin flex```
+sudo apt install bison jasmin flex
 ```
 
 ### macOS
