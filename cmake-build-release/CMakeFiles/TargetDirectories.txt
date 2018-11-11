@@ -1,0 +1,4 @@
+/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-release/CMakeFiles/main.dir
+/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-release/CMakeFiles/rebuild_cache.dir
+/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-release/CMakeFiles/edit_cache.dir
+/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-release/CMakeFiles/TrabalhoFinal.dir
