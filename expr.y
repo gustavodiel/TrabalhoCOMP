@@ -95,8 +95,7 @@ ComandoWHILE:
     ;
 
 ComandoATTRIB:
-    T_ID T_ATTR ExpressaoAritmetica T_PNT_VIRG
-    | T_ID T_ATTR T_LITERAL
+    TVAR TEQ Expr TFIM {assignvar($1.txt, $3.num);}
     ;
 
 ComandoWRITE:
