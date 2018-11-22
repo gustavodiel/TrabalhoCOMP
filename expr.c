@@ -7,8 +7,7 @@ extern FILE *yyin;
 int main()
 {
 	yyin = stdin;
-	printf("Digite uma expressão:");
+	printf("Digite uma expressao:");
 	yyparse();
 	return 0;
 }
-

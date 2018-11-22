@@ -1,3 +1,6 @@
+%%%%%%%%%%%   analisador lexico   %%%%%%%%%%
+
+
 %{
 #include "expr.tab.h"
 %}
@@ -62,4 +65,3 @@ literal \".*\"
 
 
 {id}          { return T_ID; }
-

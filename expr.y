@@ -1,7 +1,9 @@
+%%%%%%%%%%%%  analisador sintatico e semantico %%%%%%%%%%%%
+
 %{
 #include <stdio.h>
 #include <stdlib.h>
-#define YYSTYPE double
+#define YYSTYPE char*
 %}
 
 %token T_ID T_INT_N T_STRING_N T_FLOAT_N T_INI_PAR T_FIM_PAR T_INI_COL T_FIM_COL T_INT T_FLOAT T_LITERAL T_RETURN T_VOID T_PNT_VIRG T_VIRG T_WHILE T_IF T_ELSE T_PRINT T_READ T_ADD T_SUB T_MULT T_DIV T_MAIOR_Q T_MENOR_Q T_MAIOR_IG T_MENOR_IG T_IGUAL T_DIFF T_ATTR T_AND T_OR T_NOT T_FIM
