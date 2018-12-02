@@ -1,4 +1,5 @@
-/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-relwithdebinfo/CMakeFiles/main.dir
 /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-relwithdebinfo/CMakeFiles/rebuild_cache.dir
 /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-relwithdebinfo/CMakeFiles/edit_cache.dir
 /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-relwithdebinfo/CMakeFiles/TrabalhoFinal.dir
+/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-relwithdebinfo/CMakeFiles/main.dir
+/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-relwithdebinfo/CMakeFiles/clearBisonAndFlex.dir

@@ -1,4 +1,4 @@
-"/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/182.4892.24/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=RelWithDebInfo -G "CodeBlocks - Unix Makefiles" /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP
+"/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/183.4284.156/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=RelWithDebInfo -G "CodeBlocks - Unix Makefiles" /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-relwithdebinfo
