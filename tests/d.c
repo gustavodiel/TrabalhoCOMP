@@ -8,3 +8,7 @@ void main( int x, int y){
     read( algo);
     print(algo);
 }
+
+void a() {
+  return 1;
+}

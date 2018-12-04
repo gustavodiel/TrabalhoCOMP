@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = "/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/183.4284.156/CLion.app/Contents/bin/cmake/mac/bin/cmake"
+CMAKE_COMMAND = "/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/182.4505.18/CLion.app/Contents/bin/cmake/mac/bin/cmake"
 
 # The command to remove a file.
-RM = "/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/183.4284.156/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
+RM = "/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/182.4505.18/CLion.app/Contents/bin/cmake/mac/bin/cmake" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,28 +68,28 @@ include CMakeFiles/TrabalhoFinal.dir/flags.make
 CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o: CMakeFiles/TrabalhoFinal.dir/flags.make
 CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o: ../gram.tab.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c
 
 CMakeFiles/TrabalhoFinal.dir/gram.tab.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TrabalhoFinal.dir/gram.tab.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c > CMakeFiles/TrabalhoFinal.dir/gram.tab.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c > CMakeFiles/TrabalhoFinal.dir/gram.tab.c.i
 
 CMakeFiles/TrabalhoFinal.dir/gram.tab.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TrabalhoFinal.dir/gram.tab.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c -o CMakeFiles/TrabalhoFinal.dir/gram.tab.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c -o CMakeFiles/TrabalhoFinal.dir/gram.tab.c.s
 
 CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o: CMakeFiles/TrabalhoFinal.dir/flags.make
 CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o: ../lex.yy.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-release/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c
 
 CMakeFiles/TrabalhoFinal.dir/lex.yy.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TrabalhoFinal.dir/lex.yy.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c > CMakeFiles/TrabalhoFinal.dir/lex.yy.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c > CMakeFiles/TrabalhoFinal.dir/lex.yy.c.i
 
 CMakeFiles/TrabalhoFinal.dir/lex.yy.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TrabalhoFinal.dir/lex.yy.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c -o CMakeFiles/TrabalhoFinal.dir/lex.yy.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c -o CMakeFiles/TrabalhoFinal.dir/lex.yy.c.s
 
 # Object files for target TrabalhoFinal
 TrabalhoFinal_OBJECTS = \

@@ -199,9 +199,10 @@ ComandoREAD:
 	TOKEN_READ TOKEN_ABRE_PAR TOKEN_ID TOKEN_FECHA_PAR TOKEN_PONTO_VIRGULA {
 			int type = GetType( $3->tempIDName);
 			if( type == T_INT){
-				AddNumeralToMainList( 3, currentLabel);
+				AddNumeralToMainList( $3, currentLabel);
 			} else if( type == T_STR){
 				AddLDCInstruction( "\"Frase sem copyright\"", currentLabel);
+				AddREADInstruction(currentLabel);
 			} else {
 				printf("\nErro %s %i\n", $3->tempIDName, type);
 				setPossuiErro();
