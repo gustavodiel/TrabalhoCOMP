@@ -48,10 +48,10 @@ RM = "/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP
+CMAKE_SOURCE_DIR = /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -149,143 +149,143 @@ clearBisonAndFlex/fast:
 	$(MAKE) -f CMakeFiles/clearBisonAndFlex.dir/build.make CMakeFiles/clearBisonAndFlex.dir/build
 .PHONY : clearBisonAndFlex/fast
 
-Boolean.o: Boolean.c.o
+ListHandlers.o: ListHandlers.c.o
 
-.PHONY : Boolean.o
-
-# target to build an object file
-Boolean.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Boolean.c.o
-.PHONY : Boolean.c.o
-
-Boolean.i: Boolean.c.i
-
-.PHONY : Boolean.i
-
-# target to preprocess a source file
-Boolean.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Boolean.c.i
-.PHONY : Boolean.c.i
-
-Boolean.s: Boolean.c.s
-
-.PHONY : Boolean.s
-
-# target to generate assembly for a file
-Boolean.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Boolean.c.s
-.PHONY : Boolean.c.s
-
-Helpers.o: Helpers.c.o
-
-.PHONY : Helpers.o
+.PHONY : ListHandlers.o
 
 # target to build an object file
-Helpers.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Helpers.c.o
-.PHONY : Helpers.c.o
+ListHandlers.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ListHandlers.c.o
+.PHONY : ListHandlers.c.o
 
-Helpers.i: Helpers.c.i
+ListHandlers.i: ListHandlers.c.i
 
-.PHONY : Helpers.i
+.PHONY : ListHandlers.i
 
 # target to preprocess a source file
-Helpers.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Helpers.c.i
-.PHONY : Helpers.c.i
+ListHandlers.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ListHandlers.c.i
+.PHONY : ListHandlers.c.i
 
-Helpers.s: Helpers.c.s
+ListHandlers.s: ListHandlers.c.s
 
-.PHONY : Helpers.s
+.PHONY : ListHandlers.s
 
 # target to generate assembly for a file
-Helpers.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Helpers.c.s
-.PHONY : Helpers.c.s
+ListHandlers.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ListHandlers.c.s
+.PHONY : ListHandlers.c.s
 
-Initializers.o: Initializers.c.o
+Lista.o: Lista.c.o
 
-.PHONY : Initializers.o
+.PHONY : Lista.o
 
 # target to build an object file
-Initializers.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Initializers.c.o
-.PHONY : Initializers.c.o
+Lista.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Lista.c.o
+.PHONY : Lista.c.o
 
-Initializers.i: Initializers.c.i
+Lista.i: Lista.c.i
 
-.PHONY : Initializers.i
+.PHONY : Lista.i
 
 # target to preprocess a source file
-Initializers.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Initializers.c.i
-.PHONY : Initializers.c.i
+Lista.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Lista.c.i
+.PHONY : Lista.c.i
 
-Initializers.s: Initializers.c.s
+Lista.s: Lista.c.s
 
-.PHONY : Initializers.s
+.PHONY : Lista.s
 
 # target to generate assembly for a file
-Initializers.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Initializers.c.s
-.PHONY : Initializers.c.s
+Lista.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Lista.c.s
+.PHONY : Lista.c.s
 
-gram.o: gram.c.o
+Main.o: Main.c.o
 
-.PHONY : gram.o
+.PHONY : Main.o
 
 # target to build an object file
-gram.c.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/gram.c.o
-.PHONY : gram.c.o
+Main.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.c.o
+.PHONY : Main.c.o
 
-gram.i: gram.c.i
+Main.i: Main.c.i
 
-.PHONY : gram.i
+.PHONY : Main.i
 
 # target to preprocess a source file
-gram.c.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/gram.c.i
-.PHONY : gram.c.i
+Main.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.c.i
+.PHONY : Main.c.i
 
-gram.s: gram.c.s
+Main.s: Main.c.s
 
-.PHONY : gram.s
+.PHONY : Main.s
 
 # target to generate assembly for a file
-gram.c.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/gram.c.s
-.PHONY : gram.c.s
+Main.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.c.s
+.PHONY : Main.c.s
 
-gram.tab.o: gram.tab.c.o
+expr.o: expr.c.o
 
-.PHONY : gram.tab.o
+.PHONY : expr.o
 
 # target to build an object file
-gram.tab.c.o:
-	$(MAKE) -f CMakeFiles/TrabalhoFinal.dir/build.make CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/gram.tab.c.o
-.PHONY : gram.tab.c.o
+expr.c.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/expr.c.o
+.PHONY : expr.c.o
 
-gram.tab.i: gram.tab.c.i
+expr.i: expr.c.i
 
-.PHONY : gram.tab.i
+.PHONY : expr.i
 
 # target to preprocess a source file
-gram.tab.c.i:
-	$(MAKE) -f CMakeFiles/TrabalhoFinal.dir/build.make CMakeFiles/TrabalhoFinal.dir/gram.tab.c.i
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/gram.tab.c.i
-.PHONY : gram.tab.c.i
+expr.c.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/expr.c.i
+.PHONY : expr.c.i
 
-gram.tab.s: gram.tab.c.s
+expr.s: expr.c.s
 
-.PHONY : gram.tab.s
+.PHONY : expr.s
 
 # target to generate assembly for a file
-gram.tab.c.s:
-	$(MAKE) -f CMakeFiles/TrabalhoFinal.dir/build.make CMakeFiles/TrabalhoFinal.dir/gram.tab.c.s
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/gram.tab.c.s
-.PHONY : gram.tab.c.s
+expr.c.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/expr.c.s
+.PHONY : expr.c.s
+
+expr.tab.o: expr.tab.c.o
+
+.PHONY : expr.tab.o
+
+# target to build an object file
+expr.tab.c.o:
+	$(MAKE) -f CMakeFiles/TrabalhoFinal.dir/build.make CMakeFiles/TrabalhoFinal.dir/expr.tab.c.o
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/expr.tab.c.o
+.PHONY : expr.tab.c.o
+
+expr.tab.i: expr.tab.c.i
+
+.PHONY : expr.tab.i
+
+# target to preprocess a source file
+expr.tab.c.i:
+	$(MAKE) -f CMakeFiles/TrabalhoFinal.dir/build.make CMakeFiles/TrabalhoFinal.dir/expr.tab.c.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/expr.tab.c.i
+.PHONY : expr.tab.c.i
+
+expr.tab.s: expr.tab.c.s
+
+.PHONY : expr.tab.s
+
+# target to generate assembly for a file
+expr.tab.c.s:
+	$(MAKE) -f CMakeFiles/TrabalhoFinal.dir/build.make CMakeFiles/TrabalhoFinal.dir/expr.tab.c.s
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/expr.tab.c.s
+.PHONY : expr.tab.c.s
 
 lex.yy.o: lex.yy.c.o
 
@@ -325,21 +325,21 @@ help:
 	@echo "... TrabalhoFinal"
 	@echo "... main"
 	@echo "... clearBisonAndFlex"
-	@echo "... Boolean.o"
-	@echo "... Boolean.i"
-	@echo "... Boolean.s"
-	@echo "... Helpers.o"
-	@echo "... Helpers.i"
-	@echo "... Helpers.s"
-	@echo "... Initializers.o"
-	@echo "... Initializers.i"
-	@echo "... Initializers.s"
-	@echo "... gram.o"
-	@echo "... gram.i"
-	@echo "... gram.s"
-	@echo "... gram.tab.o"
-	@echo "... gram.tab.i"
-	@echo "... gram.tab.s"
+	@echo "... ListHandlers.o"
+	@echo "... ListHandlers.i"
+	@echo "... ListHandlers.s"
+	@echo "... Lista.o"
+	@echo "... Lista.i"
+	@echo "... Lista.s"
+	@echo "... Main.o"
+	@echo "... Main.i"
+	@echo "... Main.s"
+	@echo "... expr.o"
+	@echo "... expr.i"
+	@echo "... expr.s"
+	@echo "... expr.tab.o"
+	@echo "... expr.tab.i"
+	@echo "... expr.tab.s"
 	@echo "... lex.yy.o"
 	@echo "... lex.yy.i"
 	@echo "... lex.yy.s"

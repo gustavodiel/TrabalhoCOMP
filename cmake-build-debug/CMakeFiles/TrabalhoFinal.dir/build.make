@@ -43,10 +43,10 @@ RM = "/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP
+CMAKE_SOURCE_DIR = /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TrabalhoFinal.dir/depend.make
@@ -57,53 +57,53 @@ include CMakeFiles/TrabalhoFinal.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/TrabalhoFinal.dir/flags.make
 
-../gram.tab.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BISON: Criando gram.tab.c"
-	/usr/bin/bison -d --output=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.y
+../expr.tab.c:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BISON: Criando expr.tab.c"
+	/usr/bin/bison -d --output=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.tab.c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.y
 
 ../lex.yy.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "FLEX: Criando lex.yy.c"
-	/usr/bin/flex --outfile=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.l
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "FLEX: Criando lex.yy.c"
+	/usr/bin/flex --outfile=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/lex.yy.c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/gram.l
 
-CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o: CMakeFiles/TrabalhoFinal.dir/flags.make
-CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o: ../gram.tab.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c
+CMakeFiles/TrabalhoFinal.dir/expr.tab.c.o: CMakeFiles/TrabalhoFinal.dir/flags.make
+CMakeFiles/TrabalhoFinal.dir/expr.tab.c.o: ../expr.tab.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/TrabalhoFinal.dir/expr.tab.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TrabalhoFinal.dir/expr.tab.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.tab.c
 
-CMakeFiles/TrabalhoFinal.dir/gram.tab.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TrabalhoFinal.dir/gram.tab.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c > CMakeFiles/TrabalhoFinal.dir/gram.tab.c.i
+CMakeFiles/TrabalhoFinal.dir/expr.tab.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TrabalhoFinal.dir/expr.tab.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.tab.c > CMakeFiles/TrabalhoFinal.dir/expr.tab.c.i
 
-CMakeFiles/TrabalhoFinal.dir/gram.tab.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TrabalhoFinal.dir/gram.tab.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c -o CMakeFiles/TrabalhoFinal.dir/gram.tab.c.s
+CMakeFiles/TrabalhoFinal.dir/expr.tab.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TrabalhoFinal.dir/expr.tab.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.tab.c -o CMakeFiles/TrabalhoFinal.dir/expr.tab.c.s
 
 CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o: CMakeFiles/TrabalhoFinal.dir/flags.make
 CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o: ../lex.yy.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/lex.yy.c
 
 CMakeFiles/TrabalhoFinal.dir/lex.yy.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/TrabalhoFinal.dir/lex.yy.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c > CMakeFiles/TrabalhoFinal.dir/lex.yy.c.i
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/lex.yy.c > CMakeFiles/TrabalhoFinal.dir/lex.yy.c.i
 
 CMakeFiles/TrabalhoFinal.dir/lex.yy.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/TrabalhoFinal.dir/lex.yy.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/lex.yy.c -o CMakeFiles/TrabalhoFinal.dir/lex.yy.c.s
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/lex.yy.c -o CMakeFiles/TrabalhoFinal.dir/lex.yy.c.s
 
 # Object files for target TrabalhoFinal
 TrabalhoFinal_OBJECTS = \
-"CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o" \
+"CMakeFiles/TrabalhoFinal.dir/expr.tab.c.o" \
 "CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o"
 
 # External object files for target TrabalhoFinal
 TrabalhoFinal_EXTERNAL_OBJECTS =
 
-libTrabalhoFinal.a: CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o
+libTrabalhoFinal.a: CMakeFiles/TrabalhoFinal.dir/expr.tab.c.o
 libTrabalhoFinal.a: CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o
 libTrabalhoFinal.a: CMakeFiles/TrabalhoFinal.dir/build.make
 libTrabalhoFinal.a: CMakeFiles/TrabalhoFinal.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C static library libTrabalhoFinal.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C static library libTrabalhoFinal.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/TrabalhoFinal.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TrabalhoFinal.dir/link.txt --verbose=$(VERBOSE)
 
@@ -116,8 +116,8 @@ CMakeFiles/TrabalhoFinal.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/TrabalhoFinal.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/TrabalhoFinal.dir/clean
 
-CMakeFiles/TrabalhoFinal.dir/depend: ../gram.tab.c
+CMakeFiles/TrabalhoFinal.dir/depend: ../expr.tab.c
 CMakeFiles/TrabalhoFinal.dir/depend: ../lex.yy.c
-	cd /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles/TrabalhoFinal.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles/TrabalhoFinal.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/TrabalhoFinal.dir/depend
 

@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
-  "../gram.tab.c"
-  "CMakeFiles/main.dir/Initializers.c.o"
-  "CMakeFiles/main.dir/Boolean.c.o"
-  "CMakeFiles/main.dir/Helpers.c.o"
-  "CMakeFiles/main.dir/gram.c.o"
-  "CMakeFiles/main.dir/gram.tab.c.o"
+  "../expr.tab.c"
+  "CMakeFiles/main.dir/expr.c.o"
+  "CMakeFiles/main.dir/expr.tab.c.o"
+  "CMakeFiles/main.dir/Main.c.o"
+  "CMakeFiles/main.dir/Lista.c.o"
+  "CMakeFiles/main.dir/ListHandlers.c.o"
   "main.pdb"
   "main"
 )

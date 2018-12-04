@@ -6,15 +6,15 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 FIND_PACKAGE(BISON REQUIRED)
-SET(BisonOutput ${CMAKE_SOURCE_DIR}/gram.tab.c)
+SET(BisonOutput ${CMAKE_SOURCE_DIR}/expr.tab.c)
 IF(BISON_FOUND)
     ADD_CUSTOM_COMMAND(
             OUTPUT ${BisonOutput}
             COMMAND ${BISON_EXECUTABLE}
             -d
             --output=${BisonOutput}
-            ${CMAKE_SOURCE_DIR}/gram.y
-            COMMENT "BISON: Criando gram.tab.c"
+            ${CMAKE_SOURCE_DIR}/expr.y
+            COMMENT "BISON: Criando expr.tab.c"
     )
 ENDIF()
 
@@ -42,5 +42,6 @@ ADD_DEPENDENCIES(TrabalhoFinal clearBisonAndFlex)
 
 ADD_EXECUTABLE(
         main
-        Initializers.c Boolean.c Helpers.c gram.c gram.tab.c
+        expr.c expr.tab.c Main.c Main.h Lista.c Lista.h
+        ListHandlers.c
 )

@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/. 
+C_INCLUDES = -I/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/. 
 

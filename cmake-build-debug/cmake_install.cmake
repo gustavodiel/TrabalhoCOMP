@@ -1,4 +1,4 @@
-# Install script for directory: /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP
+# Install script for directory: /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

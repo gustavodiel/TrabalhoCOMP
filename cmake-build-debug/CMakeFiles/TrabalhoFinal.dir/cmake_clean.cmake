@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "../gram.tab.c"
+  "../expr.tab.c"
   "../lex.yy.c"
-  "CMakeFiles/TrabalhoFinal.dir/gram.tab.c.o"
+  "CMakeFiles/TrabalhoFinal.dir/expr.tab.c.o"
   "CMakeFiles/TrabalhoFinal.dir/lex.yy.c.o"
   "libTrabalhoFinal.pdb"
   "libTrabalhoFinal.a"

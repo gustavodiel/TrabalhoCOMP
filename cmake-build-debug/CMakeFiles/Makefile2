@@ -59,10 +59,10 @@ RM = "/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP
+CMAKE_SOURCE_DIR = /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/TrabalhoFinal.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cm
 CMakeFiles/TrabalhoFinal.dir/all: CMakeFiles/clearBisonAndFlex.dir/all
 	$(MAKE) -f CMakeFiles/TrabalhoFinal.dir/build.make CMakeFiles/TrabalhoFinal.dir/depend
 	$(MAKE) -f CMakeFiles/TrabalhoFinal.dir/build.make CMakeFiles/TrabalhoFinal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target TrabalhoFinal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target TrabalhoFinal"
 .PHONY : CMakeFiles/TrabalhoFinal.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/TrabalhoFinal.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TrabalhoFinal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TrabalhoFinal.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/TrabalhoFinal.dir/rule
 
 # Convenience name for target.
@@ -108,7 +108,7 @@ clean: CMakeFiles/TrabalhoFinal.dir/clean
 CMakeFiles/main.dir/all:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10,11,12,13 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=7,8,9,10,11,12,13 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Include target in all.
@@ -118,9 +118,9 @@ all: CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/main.dir/rule
 
 # Convenience name for target.
@@ -145,14 +145,14 @@ clean: CMakeFiles/main.dir/clean
 CMakeFiles/clearBisonAndFlex.dir/all:
 	$(MAKE) -f CMakeFiles/clearBisonAndFlex.dir/build.make CMakeFiles/clearBisonAndFlex.dir/depend
 	$(MAKE) -f CMakeFiles/clearBisonAndFlex.dir/build.make CMakeFiles/clearBisonAndFlex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=6 "Built target clearBisonAndFlex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=6 "Built target clearBisonAndFlex"
 .PHONY : CMakeFiles/clearBisonAndFlex.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/clearBisonAndFlex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/clearBisonAndFlex.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/clearBisonAndFlex.dir/rule
 
 # Convenience name for target.

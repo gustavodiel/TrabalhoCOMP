@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/cc -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/main.dir/Initializers.c.o CMakeFiles/main.dir/Boolean.c.o CMakeFiles/main.dir/Helpers.c.o CMakeFiles/main.dir/gram.c.o CMakeFiles/main.dir/gram.tab.c.o  -o main 
+/Library/Developer/CommandLineTools/usr/bin/cc -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/main.dir/expr.c.o CMakeFiles/main.dir/expr.tab.c.o CMakeFiles/main.dir/Main.c.o CMakeFiles/main.dir/Lista.c.o CMakeFiles/main.dir/ListHandlers.c.o  -o main 

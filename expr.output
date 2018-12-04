@@ -1,0 +1,2016 @@
+Terminals which are not used
+
+   TFIM
+   TERROR
+   EOP
+
+
+Grammar
+
+    0 $accept: Inicio $end
+
+    1 Inicio: Programa
+
+    2 Programa: ListaFuncoes CorrecaoID BlocoPrincipal
+    3         | CorrecaoID BlocoPrincipal
+
+    4 CorrecaoID: /* empty */
+
+    5 ListaFuncoes: ListaFuncoes FuncaoGeral
+    6             | FuncaoGeral
+
+    7 FuncaoGeral: Funcao BlocoPrincipal
+
+    8 Funcao: TipoRetorno TID TAPAR DeclaracaoParametros TFPAR
+    9       | TipoRetorno TID TAPAR TFPAR
+
+   10 TipoRetorno: Tipo
+   11            | TVOID
+
+   12 DeclaracaoParametros: DeclaracaoParametros TVIRG Tipo TID
+   13                     | Tipo TID
+
+   14 BlocoPrincipal: TACHAVE Declaracoes ListaComandos TFCHAVE
+   15               | TACHAVE ListaComandos TFCHAVE
+
+   16 Declaracoes: Declaracoes Declaracao
+   17            | Declaracao
+
+   18 Declaracao: Tipo ListaId TPVIRG
+
+   19 Tipo: TINT
+   20     | TSTRING
+
+   21 ListaId: ListaId TVIRG TID
+   22        | TID
+
+   23 Bloco: TACHAVE ListaComandos TFCHAVE
+
+   24 ListaComandos: ListaComandos Comando
+   25              | Comando
+
+   26 Comando: ComandoIF
+   27        | ComandoWHILE
+   28        | ComandoAttrib
+   29        | ComandoPRINT
+   30        | ComandoREAD
+   31        | ChamadaFuncao
+   32        | ComandoADDUnitario
+   33        | ComandoSUBUnitario
+   34        | ComandoAdicao
+   35        | ComandoSubtracao
+   36        | Retorno
+
+   37 ComandoADDUnitario: TID TINC TPVIRG
+
+   38 ComandoSUBUnitario: TID TDEC TPVIRG
+
+   39 ComandoAdicao: CarregaID TINC_N ExpressaoAritmetica TPVIRG
+
+   40 ComandoSubtracao: CarregaID TDEC_N ExpressaoAritmetica TPVIRG
+
+   41 CarregaID: TID
+
+   42 Retorno: TRETURN ExpressaoAritmetica TPVIRG
+
+   43 ComandoIF: TIF TAPAR ExpressaoLogica TFPAR NL Bloco
+   44          | TIF TAPAR ExpressaoLogica TFPAR NL Bloco N TELSE NL Bloco
+
+   45 N: /* empty */
+
+   46 ComandoWHILE: TWHILE NL TAPAR ExpressaoLogica TFPAR NL Bloco
+
+   47 ComandoAttrib: TID TATRIB ExpressaoAritmetica TPVIRG
+   48              | TID TATRIB TLITERAL TPVIRG
+
+   49 ComandoPRINT: TPRINT TAPAR M ExpressaoAritmetica TFPAR TPVIRG
+   50             | TPRINT TAPAR M TLITERAL TFPAR TPVIRG
+
+   51 M: /* empty */
+
+   52 ComandoREAD: TREAD TAPAR TID TFPAR TPVIRG
+
+   53 ChamadaFuncao: TID TAPAR ListaParametros TFPAR TPVIRG
+   54              | TID TAPAR TFPAR TPVIRG
+
+   55 ChamadaFuncaoSemPVIRG: TID TAPAR ListaParametros TFPAR
+   56                      | TID TAPAR TFPAR
+
+   57 ListaParametros: ListaParametros TVIRG ExpressaoAritmetica
+   58                | ExpressaoAritmetica
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica TADD TermoAritmetico
+   60                    | ExpressaoAritmetica TSUB TermoAritmetico
+   61                    | TermoAritmetico
+
+   62 TermoAritmetico: TermoAritmetico TMUL FatorAritmetico
+   63                | TermoAritmetico TDIV FatorAritmetico
+   64                | FatorAritmetico
+
+   65 FatorAritmetico: TNUM
+   66                | TSUB FatorAritmetico
+   67                | ChamadaFuncaoSemPVIRG
+   68                | TID
+   69                | TAPAR ExpressaoAritmetica TFPAR
+
+   70 ExpressaoLogica: ExpressaoLogica TAND NL FatorLogico
+   71                | ExpressaoLogica TOR NL FatorLogico
+   72                | FatorLogico
+
+   73 NL: /* empty */
+
+   74 FatorLogico: TNOT FatorLogico
+   75            | TAPAR ExpressaoLogica TFPAR
+   76            | ExpressaoRelacional
+
+   77 ExpressaoRelacional: ExpressaoAritmetica TMAIOR ExpressaoAritmetica
+   78                    | ExpressaoAritmetica TMENOR ExpressaoAritmetica
+   79                    | ExpressaoAritmetica TMAIGUAL ExpressaoAritmetica
+   80                    | ExpressaoAritmetica TMEIGUAL ExpressaoAritmetica
+   81                    | ExpressaoAritmetica TIGUAL ExpressaoAritmetica
+   82                    | ExpressaoAritmetica TDIFER ExpressaoAritmetica
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+TSTRING (258) 20
+TVOID (259) 11
+TINT (260) 19
+TRETURN (261) 42
+TPRINT (262) 49 50
+TREAD (263) 52
+TIF (264) 43 44
+TWHILE (265) 46
+TELSE (266) 44
+TMEIGUAL (267) 80
+TMAIGUAL (268) 79
+TIGUAL (269) 81
+TDIFER (270) 82
+TATRIB (271) 47 48
+TMAIOR (272) 77
+TMENOR (273) 78
+TACHAVE (274) 14 15 23
+TFCHAVE (275) 14 15 23
+TADD (276) 59
+TSUB (277) 60 66
+TMUL (278) 62
+TDIV (279) 63
+TAPAR (280) 8 9 43 44 46 49 50 52 53 54 55 56 69 75
+TFPAR (281) 8 9 43 44 46 49 50 52 53 54 55 56 69 75
+TFIM (282)
+TNUM (283) 65
+TVIRG (284) 12 21 57
+TPVIRG (285) 18 37 38 39 40 42 47 48 49 50 52 53 54
+TID (286) 8 9 12 13 21 22 37 38 41 47 48 52 53 54 55 56 68
+TLITERAL (287) 48 50
+TNOT (288) 74
+TAND (289) 70
+TOR (290) 71
+TERROR (291)
+EOP (292)
+TINC (293) 37
+TDEC (294) 38
+TINC_N (295) 39
+TDEC_N (296) 40
+
+
+Nonterminals, with rules where they appear
+
+$accept (42)
+    on left: 0
+Inicio (43)
+    on left: 1, on right: 0
+Programa (44)
+    on left: 2 3, on right: 1
+CorrecaoID (45)
+    on left: 4, on right: 2 3
+ListaFuncoes (46)
+    on left: 5 6, on right: 2 5
+FuncaoGeral (47)
+    on left: 7, on right: 5 6
+Funcao (48)
+    on left: 8 9, on right: 7
+TipoRetorno (49)
+    on left: 10 11, on right: 8 9
+DeclaracaoParametros (50)
+    on left: 12 13, on right: 8 12
+BlocoPrincipal (51)
+    on left: 14 15, on right: 2 3 7
+Declaracoes (52)
+    on left: 16 17, on right: 14 16
+Declaracao (53)
+    on left: 18, on right: 16 17
+Tipo (54)
+    on left: 19 20, on right: 10 12 13 18
+ListaId (55)
+    on left: 21 22, on right: 18 21
+Bloco (56)
+    on left: 23, on right: 43 44 46
+ListaComandos (57)
+    on left: 24 25, on right: 14 15 23 24
+Comando (58)
+    on left: 26 27 28 29 30 31 32 33 34 35 36, on right: 24 25
+ComandoADDUnitario (59)
+    on left: 37, on right: 32
+ComandoSUBUnitario (60)
+    on left: 38, on right: 33
+ComandoAdicao (61)
+    on left: 39, on right: 34
+ComandoSubtracao (62)
+    on left: 40, on right: 35
+CarregaID (63)
+    on left: 41, on right: 39 40
+Retorno (64)
+    on left: 42, on right: 36
+ComandoIF (65)
+    on left: 43 44, on right: 26
+N (66)
+    on left: 45, on right: 44
+ComandoWHILE (67)
+    on left: 46, on right: 27
+ComandoAttrib (68)
+    on left: 47 48, on right: 28
+ComandoPRINT (69)
+    on left: 49 50, on right: 29
+M (70)
+    on left: 51, on right: 49 50
+ComandoREAD (71)
+    on left: 52, on right: 30
+ChamadaFuncao (72)
+    on left: 53 54, on right: 31
+ChamadaFuncaoSemPVIRG (73)
+    on left: 55 56, on right: 67
+ListaParametros (74)
+    on left: 57 58, on right: 53 55 57
+ExpressaoAritmetica (75)
+    on left: 59 60 61, on right: 39 40 42 47 49 57 58 59 60 69 77 78
+    79 80 81 82
+TermoAritmetico (76)
+    on left: 62 63 64, on right: 59 60 61 62 63
+FatorAritmetico (77)
+    on left: 65 66 67 68 69, on right: 62 63 64 66
+ExpressaoLogica (78)
+    on left: 70 71 72, on right: 43 44 46 70 71 75
+NL (79)
+    on left: 73, on right: 43 44 46 70 71
+FatorLogico (80)
+    on left: 74 75 76, on right: 70 71 72 74
+ExpressaoRelacional (81)
+    on left: 77 78 79 80 81 82, on right: 76
+
+
+state 0
+
+    0 $accept: . Inicio $end
+
+    TSTRING  shift, and go to state 1
+    TVOID    shift, and go to state 2
+    TINT     shift, and go to state 3
+
+    $default  reduce using rule 4 (CorrecaoID)
+
+    Inicio        go to state 4
+    Programa      go to state 5
+    CorrecaoID    go to state 6
+    ListaFuncoes  go to state 7
+    FuncaoGeral   go to state 8
+    Funcao        go to state 9
+    TipoRetorno   go to state 10
+    Tipo          go to state 11
+
+
+state 1
+
+   20 Tipo: TSTRING .
+
+    $default  reduce using rule 20 (Tipo)
+
+
+state 2
+
+   11 TipoRetorno: TVOID .
+
+    $default  reduce using rule 11 (TipoRetorno)
+
+
+state 3
+
+   19 Tipo: TINT .
+
+    $default  reduce using rule 19 (Tipo)
+
+
+state 4
+
+    0 $accept: Inicio . $end
+
+    $end  shift, and go to state 12
+
+
+state 5
+
+    1 Inicio: Programa .
+
+    $default  reduce using rule 1 (Inicio)
+
+
+state 6
+
+    3 Programa: CorrecaoID . BlocoPrincipal
+
+    TACHAVE  shift, and go to state 13
+
+    BlocoPrincipal  go to state 14
+
+
+state 7
+
+    2 Programa: ListaFuncoes . CorrecaoID BlocoPrincipal
+    5 ListaFuncoes: ListaFuncoes . FuncaoGeral
+
+    TSTRING  shift, and go to state 1
+    TVOID    shift, and go to state 2
+    TINT     shift, and go to state 3
+
+    $default  reduce using rule 4 (CorrecaoID)
+
+    CorrecaoID   go to state 15
+    FuncaoGeral  go to state 16
+    Funcao       go to state 9
+    TipoRetorno  go to state 10
+    Tipo         go to state 11
+
+
+state 8
+
+    6 ListaFuncoes: FuncaoGeral .
+
+    $default  reduce using rule 6 (ListaFuncoes)
+
+
+state 9
+
+    7 FuncaoGeral: Funcao . BlocoPrincipal
+
+    TACHAVE  shift, and go to state 13
+
+    BlocoPrincipal  go to state 17
+
+
+state 10
+
+    8 Funcao: TipoRetorno . TID TAPAR DeclaracaoParametros TFPAR
+    9       | TipoRetorno . TID TAPAR TFPAR
+
+    TID  shift, and go to state 18
+
+
+state 11
+
+   10 TipoRetorno: Tipo .
+
+    $default  reduce using rule 10 (TipoRetorno)
+
+
+state 12
+
+    0 $accept: Inicio $end .
+
+    $default  accept
+
+
+state 13
+
+   14 BlocoPrincipal: TACHAVE . Declaracoes ListaComandos TFCHAVE
+   15               | TACHAVE . ListaComandos TFCHAVE
+
+    TSTRING  shift, and go to state 1
+    TINT     shift, and go to state 3
+    TRETURN  shift, and go to state 19
+    TPRINT   shift, and go to state 20
+    TREAD    shift, and go to state 21
+    TIF      shift, and go to state 22
+    TWHILE   shift, and go to state 23
+    TID      shift, and go to state 24
+
+    Declaracoes         go to state 25
+    Declaracao          go to state 26
+    Tipo                go to state 27
+    ListaComandos       go to state 28
+    Comando             go to state 29
+    ComandoADDUnitario  go to state 30
+    ComandoSUBUnitario  go to state 31
+    ComandoAdicao       go to state 32
+    ComandoSubtracao    go to state 33
+    CarregaID           go to state 34
+    Retorno             go to state 35
+    ComandoIF           go to state 36
+    ComandoWHILE        go to state 37
+    ComandoAttrib       go to state 38
+    ComandoPRINT        go to state 39
+    ComandoREAD         go to state 40
+    ChamadaFuncao       go to state 41
+
+
+state 14
+
+    3 Programa: CorrecaoID BlocoPrincipal .
+
+    $default  reduce using rule 3 (Programa)
+
+
+state 15
+
+    2 Programa: ListaFuncoes CorrecaoID . BlocoPrincipal
+
+    TACHAVE  shift, and go to state 13
+
+    BlocoPrincipal  go to state 42
+
+
+state 16
+
+    5 ListaFuncoes: ListaFuncoes FuncaoGeral .
+
+    $default  reduce using rule 5 (ListaFuncoes)
+
+
+state 17
+
+    7 FuncaoGeral: Funcao BlocoPrincipal .
+
+    $default  reduce using rule 7 (FuncaoGeral)
+
+
+state 18
+
+    8 Funcao: TipoRetorno TID . TAPAR DeclaracaoParametros TFPAR
+    9       | TipoRetorno TID . TAPAR TFPAR
+
+    TAPAR  shift, and go to state 43
+
+
+state 19
+
+   42 Retorno: TRETURN . ExpressaoAritmetica TPVIRG
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 49
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 20
+
+   49 ComandoPRINT: TPRINT . TAPAR M ExpressaoAritmetica TFPAR TPVIRG
+   50             | TPRINT . TAPAR M TLITERAL TFPAR TPVIRG
+
+    TAPAR  shift, and go to state 52
+
+
+state 21
+
+   52 ComandoREAD: TREAD . TAPAR TID TFPAR TPVIRG
+
+    TAPAR  shift, and go to state 53
+
+
+state 22
+
+   43 ComandoIF: TIF . TAPAR ExpressaoLogica TFPAR NL Bloco
+   44          | TIF . TAPAR ExpressaoLogica TFPAR NL Bloco N TELSE NL Bloco
+
+    TAPAR  shift, and go to state 54
+
+
+state 23
+
+   46 ComandoWHILE: TWHILE . NL TAPAR ExpressaoLogica TFPAR NL Bloco
+
+    $default  reduce using rule 73 (NL)
+
+    NL  go to state 55
+
+
+state 24
+
+   37 ComandoADDUnitario: TID . TINC TPVIRG
+   38 ComandoSUBUnitario: TID . TDEC TPVIRG
+   41 CarregaID: TID .
+   47 ComandoAttrib: TID . TATRIB ExpressaoAritmetica TPVIRG
+   48              | TID . TATRIB TLITERAL TPVIRG
+   53 ChamadaFuncao: TID . TAPAR ListaParametros TFPAR TPVIRG
+   54              | TID . TAPAR TFPAR TPVIRG
+
+    TATRIB  shift, and go to state 56
+    TAPAR   shift, and go to state 57
+    TINC    shift, and go to state 58
+    TDEC    shift, and go to state 59
+
+    $default  reduce using rule 41 (CarregaID)
+
+
+state 25
+
+   14 BlocoPrincipal: TACHAVE Declaracoes . ListaComandos TFCHAVE
+   16 Declaracoes: Declaracoes . Declaracao
+
+    TSTRING  shift, and go to state 1
+    TINT     shift, and go to state 3
+    TRETURN  shift, and go to state 19
+    TPRINT   shift, and go to state 20
+    TREAD    shift, and go to state 21
+    TIF      shift, and go to state 22
+    TWHILE   shift, and go to state 23
+    TID      shift, and go to state 24
+
+    Declaracao          go to state 60
+    Tipo                go to state 27
+    ListaComandos       go to state 61
+    Comando             go to state 29
+    ComandoADDUnitario  go to state 30
+    ComandoSUBUnitario  go to state 31
+    ComandoAdicao       go to state 32
+    ComandoSubtracao    go to state 33
+    CarregaID           go to state 34
+    Retorno             go to state 35
+    ComandoIF           go to state 36
+    ComandoWHILE        go to state 37
+    ComandoAttrib       go to state 38
+    ComandoPRINT        go to state 39
+    ComandoREAD         go to state 40
+    ChamadaFuncao       go to state 41
+
+
+state 26
+
+   17 Declaracoes: Declaracao .
+
+    $default  reduce using rule 17 (Declaracoes)
+
+
+state 27
+
+   18 Declaracao: Tipo . ListaId TPVIRG
+
+    TID  shift, and go to state 62
+
+    ListaId  go to state 63
+
+
+state 28
+
+   15 BlocoPrincipal: TACHAVE ListaComandos . TFCHAVE
+   24 ListaComandos: ListaComandos . Comando
+
+    TRETURN  shift, and go to state 19
+    TPRINT   shift, and go to state 20
+    TREAD    shift, and go to state 21
+    TIF      shift, and go to state 22
+    TWHILE   shift, and go to state 23
+    TFCHAVE  shift, and go to state 64
+    TID      shift, and go to state 24
+
+    Comando             go to state 65
+    ComandoADDUnitario  go to state 30
+    ComandoSUBUnitario  go to state 31
+    ComandoAdicao       go to state 32
+    ComandoSubtracao    go to state 33
+    CarregaID           go to state 34
+    Retorno             go to state 35
+    ComandoIF           go to state 36
+    ComandoWHILE        go to state 37
+    ComandoAttrib       go to state 38
+    ComandoPRINT        go to state 39
+    ComandoREAD         go to state 40
+    ChamadaFuncao       go to state 41
+
+
+state 29
+
+   25 ListaComandos: Comando .
+
+    $default  reduce using rule 25 (ListaComandos)
+
+
+state 30
+
+   32 Comando: ComandoADDUnitario .
+
+    $default  reduce using rule 32 (Comando)
+
+
+state 31
+
+   33 Comando: ComandoSUBUnitario .
+
+    $default  reduce using rule 33 (Comando)
+
+
+state 32
+
+   34 Comando: ComandoAdicao .
+
+    $default  reduce using rule 34 (Comando)
+
+
+state 33
+
+   35 Comando: ComandoSubtracao .
+
+    $default  reduce using rule 35 (Comando)
+
+
+state 34
+
+   39 ComandoAdicao: CarregaID . TINC_N ExpressaoAritmetica TPVIRG
+   40 ComandoSubtracao: CarregaID . TDEC_N ExpressaoAritmetica TPVIRG
+
+    TINC_N  shift, and go to state 66
+    TDEC_N  shift, and go to state 67
+
+
+state 35
+
+   36 Comando: Retorno .
+
+    $default  reduce using rule 36 (Comando)
+
+
+state 36
+
+   26 Comando: ComandoIF .
+
+    $default  reduce using rule 26 (Comando)
+
+
+state 37
+
+   27 Comando: ComandoWHILE .
+
+    $default  reduce using rule 27 (Comando)
+
+
+state 38
+
+   28 Comando: ComandoAttrib .
+
+    $default  reduce using rule 28 (Comando)
+
+
+state 39
+
+   29 Comando: ComandoPRINT .
+
+    $default  reduce using rule 29 (Comando)
+
+
+state 40
+
+   30 Comando: ComandoREAD .
+
+    $default  reduce using rule 30 (Comando)
+
+
+state 41
+
+   31 Comando: ChamadaFuncao .
+
+    $default  reduce using rule 31 (Comando)
+
+
+state 42
+
+    2 Programa: ListaFuncoes CorrecaoID BlocoPrincipal .
+
+    $default  reduce using rule 2 (Programa)
+
+
+state 43
+
+    8 Funcao: TipoRetorno TID TAPAR . DeclaracaoParametros TFPAR
+    9       | TipoRetorno TID TAPAR . TFPAR
+
+    TSTRING  shift, and go to state 1
+    TINT     shift, and go to state 3
+    TFPAR    shift, and go to state 68
+
+    DeclaracaoParametros  go to state 69
+    Tipo                  go to state 70
+
+
+state 44
+
+   66 FatorAritmetico: TSUB . FatorAritmetico
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    FatorAritmetico        go to state 71
+
+
+state 45
+
+   69 FatorAritmetico: TAPAR . ExpressaoAritmetica TFPAR
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 72
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 46
+
+   65 FatorAritmetico: TNUM .
+
+    $default  reduce using rule 65 (FatorAritmetico)
+
+
+state 47
+
+   55 ChamadaFuncaoSemPVIRG: TID . TAPAR ListaParametros TFPAR
+   56                      | TID . TAPAR TFPAR
+   68 FatorAritmetico: TID .
+
+    TAPAR  shift, and go to state 73
+
+    $default  reduce using rule 68 (FatorAritmetico)
+
+
+state 48
+
+   67 FatorAritmetico: ChamadaFuncaoSemPVIRG .
+
+    $default  reduce using rule 67 (FatorAritmetico)
+
+
+state 49
+
+   42 Retorno: TRETURN ExpressaoAritmetica . TPVIRG
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+
+    TADD    shift, and go to state 74
+    TSUB    shift, and go to state 75
+    TPVIRG  shift, and go to state 76
+
+
+state 50
+
+   61 ExpressaoAritmetica: TermoAritmetico .
+   62 TermoAritmetico: TermoAritmetico . TMUL FatorAritmetico
+   63                | TermoAritmetico . TDIV FatorAritmetico
+
+    TMUL  shift, and go to state 77
+    TDIV  shift, and go to state 78
+
+    $default  reduce using rule 61 (ExpressaoAritmetica)
+
+
+state 51
+
+   64 TermoAritmetico: FatorAritmetico .
+
+    $default  reduce using rule 64 (TermoAritmetico)
+
+
+state 52
+
+   49 ComandoPRINT: TPRINT TAPAR . M ExpressaoAritmetica TFPAR TPVIRG
+   50             | TPRINT TAPAR . M TLITERAL TFPAR TPVIRG
+
+    $default  reduce using rule 51 (M)
+
+    M  go to state 79
+
+
+state 53
+
+   52 ComandoREAD: TREAD TAPAR . TID TFPAR TPVIRG
+
+    TID  shift, and go to state 80
+
+
+state 54
+
+   43 ComandoIF: TIF TAPAR . ExpressaoLogica TFPAR NL Bloco
+   44          | TIF TAPAR . ExpressaoLogica TFPAR NL Bloco N TELSE NL Bloco
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 81
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+    TNOT   shift, and go to state 82
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 83
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+    ExpressaoLogica        go to state 84
+    FatorLogico            go to state 85
+    ExpressaoRelacional    go to state 86
+
+
+state 55
+
+   46 ComandoWHILE: TWHILE NL . TAPAR ExpressaoLogica TFPAR NL Bloco
+
+    TAPAR  shift, and go to state 87
+
+
+state 56
+
+   47 ComandoAttrib: TID TATRIB . ExpressaoAritmetica TPVIRG
+   48              | TID TATRIB . TLITERAL TPVIRG
+
+    TSUB      shift, and go to state 44
+    TAPAR     shift, and go to state 45
+    TNUM      shift, and go to state 46
+    TID       shift, and go to state 47
+    TLITERAL  shift, and go to state 88
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 89
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 57
+
+   53 ChamadaFuncao: TID TAPAR . ListaParametros TFPAR TPVIRG
+   54              | TID TAPAR . TFPAR TPVIRG
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TFPAR  shift, and go to state 90
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ListaParametros        go to state 91
+    ExpressaoAritmetica    go to state 92
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 58
+
+   37 ComandoADDUnitario: TID TINC . TPVIRG
+
+    TPVIRG  shift, and go to state 93
+
+
+state 59
+
+   38 ComandoSUBUnitario: TID TDEC . TPVIRG
+
+    TPVIRG  shift, and go to state 94
+
+
+state 60
+
+   16 Declaracoes: Declaracoes Declaracao .
+
+    $default  reduce using rule 16 (Declaracoes)
+
+
+state 61
+
+   14 BlocoPrincipal: TACHAVE Declaracoes ListaComandos . TFCHAVE
+   24 ListaComandos: ListaComandos . Comando
+
+    TRETURN  shift, and go to state 19
+    TPRINT   shift, and go to state 20
+    TREAD    shift, and go to state 21
+    TIF      shift, and go to state 22
+    TWHILE   shift, and go to state 23
+    TFCHAVE  shift, and go to state 95
+    TID      shift, and go to state 24
+
+    Comando             go to state 65
+    ComandoADDUnitario  go to state 30
+    ComandoSUBUnitario  go to state 31
+    ComandoAdicao       go to state 32
+    ComandoSubtracao    go to state 33
+    CarregaID           go to state 34
+    Retorno             go to state 35
+    ComandoIF           go to state 36
+    ComandoWHILE        go to state 37
+    ComandoAttrib       go to state 38
+    ComandoPRINT        go to state 39
+    ComandoREAD         go to state 40
+    ChamadaFuncao       go to state 41
+
+
+state 62
+
+   22 ListaId: TID .
+
+    $default  reduce using rule 22 (ListaId)
+
+
+state 63
+
+   18 Declaracao: Tipo ListaId . TPVIRG
+   21 ListaId: ListaId . TVIRG TID
+
+    TVIRG   shift, and go to state 96
+    TPVIRG  shift, and go to state 97
+
+
+state 64
+
+   15 BlocoPrincipal: TACHAVE ListaComandos TFCHAVE .
+
+    $default  reduce using rule 15 (BlocoPrincipal)
+
+
+state 65
+
+   24 ListaComandos: ListaComandos Comando .
+
+    $default  reduce using rule 24 (ListaComandos)
+
+
+state 66
+
+   39 ComandoAdicao: CarregaID TINC_N . ExpressaoAritmetica TPVIRG
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 98
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 67
+
+   40 ComandoSubtracao: CarregaID TDEC_N . ExpressaoAritmetica TPVIRG
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 99
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 68
+
+    9 Funcao: TipoRetorno TID TAPAR TFPAR .
+
+    $default  reduce using rule 9 (Funcao)
+
+
+state 69
+
+    8 Funcao: TipoRetorno TID TAPAR DeclaracaoParametros . TFPAR
+   12 DeclaracaoParametros: DeclaracaoParametros . TVIRG Tipo TID
+
+    TFPAR  shift, and go to state 100
+    TVIRG  shift, and go to state 101
+
+
+state 70
+
+   13 DeclaracaoParametros: Tipo . TID
+
+    TID  shift, and go to state 102
+
+
+state 71
+
+   66 FatorAritmetico: TSUB FatorAritmetico .
+
+    $default  reduce using rule 66 (FatorAritmetico)
+
+
+state 72
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+   69 FatorAritmetico: TAPAR ExpressaoAritmetica . TFPAR
+
+    TADD   shift, and go to state 74
+    TSUB   shift, and go to state 75
+    TFPAR  shift, and go to state 103
+
+
+state 73
+
+   55 ChamadaFuncaoSemPVIRG: TID TAPAR . ListaParametros TFPAR
+   56                      | TID TAPAR . TFPAR
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TFPAR  shift, and go to state 104
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ListaParametros        go to state 105
+    ExpressaoAritmetica    go to state 92
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 74
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica TADD . TermoAritmetico
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    TermoAritmetico        go to state 106
+    FatorAritmetico        go to state 51
+
+
+state 75
+
+   60 ExpressaoAritmetica: ExpressaoAritmetica TSUB . TermoAritmetico
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    TermoAritmetico        go to state 107
+    FatorAritmetico        go to state 51
+
+
+state 76
+
+   42 Retorno: TRETURN ExpressaoAritmetica TPVIRG .
+
+    $default  reduce using rule 42 (Retorno)
+
+
+state 77
+
+   62 TermoAritmetico: TermoAritmetico TMUL . FatorAritmetico
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    FatorAritmetico        go to state 108
+
+
+state 78
+
+   63 TermoAritmetico: TermoAritmetico TDIV . FatorAritmetico
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    FatorAritmetico        go to state 109
+
+
+state 79
+
+   49 ComandoPRINT: TPRINT TAPAR M . ExpressaoAritmetica TFPAR TPVIRG
+   50             | TPRINT TAPAR M . TLITERAL TFPAR TPVIRG
+
+    TSUB      shift, and go to state 44
+    TAPAR     shift, and go to state 45
+    TNUM      shift, and go to state 46
+    TID       shift, and go to state 47
+    TLITERAL  shift, and go to state 110
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 111
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 80
+
+   52 ComandoREAD: TREAD TAPAR TID . TFPAR TPVIRG
+
+    TFPAR  shift, and go to state 112
+
+
+state 81
+
+   69 FatorAritmetico: TAPAR . ExpressaoAritmetica TFPAR
+   75 FatorLogico: TAPAR . ExpressaoLogica TFPAR
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 81
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+    TNOT   shift, and go to state 82
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 113
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+    ExpressaoLogica        go to state 114
+    FatorLogico            go to state 85
+    ExpressaoRelacional    go to state 86
+
+
+state 82
+
+   74 FatorLogico: TNOT . FatorLogico
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 81
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+    TNOT   shift, and go to state 82
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 83
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+    FatorLogico            go to state 115
+    ExpressaoRelacional    go to state 86
+
+
+state 83
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+   77 ExpressaoRelacional: ExpressaoAritmetica . TMAIOR ExpressaoAritmetica
+   78                    | ExpressaoAritmetica . TMENOR ExpressaoAritmetica
+   79                    | ExpressaoAritmetica . TMAIGUAL ExpressaoAritmetica
+   80                    | ExpressaoAritmetica . TMEIGUAL ExpressaoAritmetica
+   81                    | ExpressaoAritmetica . TIGUAL ExpressaoAritmetica
+   82                    | ExpressaoAritmetica . TDIFER ExpressaoAritmetica
+
+    TMEIGUAL  shift, and go to state 116
+    TMAIGUAL  shift, and go to state 117
+    TIGUAL    shift, and go to state 118
+    TDIFER    shift, and go to state 119
+    TMAIOR    shift, and go to state 120
+    TMENOR    shift, and go to state 121
+    TADD      shift, and go to state 74
+    TSUB      shift, and go to state 75
+
+
+state 84
+
+   43 ComandoIF: TIF TAPAR ExpressaoLogica . TFPAR NL Bloco
+   44          | TIF TAPAR ExpressaoLogica . TFPAR NL Bloco N TELSE NL Bloco
+   70 ExpressaoLogica: ExpressaoLogica . TAND NL FatorLogico
+   71                | ExpressaoLogica . TOR NL FatorLogico
+
+    TFPAR  shift, and go to state 122
+    TAND   shift, and go to state 123
+    TOR    shift, and go to state 124
+
+
+state 85
+
+   72 ExpressaoLogica: FatorLogico .
+
+    $default  reduce using rule 72 (ExpressaoLogica)
+
+
+state 86
+
+   76 FatorLogico: ExpressaoRelacional .
+
+    $default  reduce using rule 76 (FatorLogico)
+
+
+state 87
+
+   46 ComandoWHILE: TWHILE NL TAPAR . ExpressaoLogica TFPAR NL Bloco
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 81
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+    TNOT   shift, and go to state 82
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 83
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+    ExpressaoLogica        go to state 125
+    FatorLogico            go to state 85
+    ExpressaoRelacional    go to state 86
+
+
+state 88
+
+   48 ComandoAttrib: TID TATRIB TLITERAL . TPVIRG
+
+    TPVIRG  shift, and go to state 126
+
+
+state 89
+
+   47 ComandoAttrib: TID TATRIB ExpressaoAritmetica . TPVIRG
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+
+    TADD    shift, and go to state 74
+    TSUB    shift, and go to state 75
+    TPVIRG  shift, and go to state 127
+
+
+state 90
+
+   54 ChamadaFuncao: TID TAPAR TFPAR . TPVIRG
+
+    TPVIRG  shift, and go to state 128
+
+
+state 91
+
+   53 ChamadaFuncao: TID TAPAR ListaParametros . TFPAR TPVIRG
+   57 ListaParametros: ListaParametros . TVIRG ExpressaoAritmetica
+
+    TFPAR  shift, and go to state 129
+    TVIRG  shift, and go to state 130
+
+
+state 92
+
+   58 ListaParametros: ExpressaoAritmetica .
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+
+    TADD  shift, and go to state 74
+    TSUB  shift, and go to state 75
+
+    $default  reduce using rule 58 (ListaParametros)
+
+
+state 93
+
+   37 ComandoADDUnitario: TID TINC TPVIRG .
+
+    $default  reduce using rule 37 (ComandoADDUnitario)
+
+
+state 94
+
+   38 ComandoSUBUnitario: TID TDEC TPVIRG .
+
+    $default  reduce using rule 38 (ComandoSUBUnitario)
+
+
+state 95
+
+   14 BlocoPrincipal: TACHAVE Declaracoes ListaComandos TFCHAVE .
+
+    $default  reduce using rule 14 (BlocoPrincipal)
+
+
+state 96
+
+   21 ListaId: ListaId TVIRG . TID
+
+    TID  shift, and go to state 131
+
+
+state 97
+
+   18 Declaracao: Tipo ListaId TPVIRG .
+
+    $default  reduce using rule 18 (Declaracao)
+
+
+state 98
+
+   39 ComandoAdicao: CarregaID TINC_N ExpressaoAritmetica . TPVIRG
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+
+    TADD    shift, and go to state 74
+    TSUB    shift, and go to state 75
+    TPVIRG  shift, and go to state 132
+
+
+state 99
+
+   40 ComandoSubtracao: CarregaID TDEC_N ExpressaoAritmetica . TPVIRG
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+
+    TADD    shift, and go to state 74
+    TSUB    shift, and go to state 75
+    TPVIRG  shift, and go to state 133
+
+
+state 100
+
+    8 Funcao: TipoRetorno TID TAPAR DeclaracaoParametros TFPAR .
+
+    $default  reduce using rule 8 (Funcao)
+
+
+state 101
+
+   12 DeclaracaoParametros: DeclaracaoParametros TVIRG . Tipo TID
+
+    TSTRING  shift, and go to state 1
+    TINT     shift, and go to state 3
+
+    Tipo  go to state 134
+
+
+state 102
+
+   13 DeclaracaoParametros: Tipo TID .
+
+    $default  reduce using rule 13 (DeclaracaoParametros)
+
+
+state 103
+
+   69 FatorAritmetico: TAPAR ExpressaoAritmetica TFPAR .
+
+    $default  reduce using rule 69 (FatorAritmetico)
+
+
+state 104
+
+   56 ChamadaFuncaoSemPVIRG: TID TAPAR TFPAR .
+
+    $default  reduce using rule 56 (ChamadaFuncaoSemPVIRG)
+
+
+state 105
+
+   55 ChamadaFuncaoSemPVIRG: TID TAPAR ListaParametros . TFPAR
+   57 ListaParametros: ListaParametros . TVIRG ExpressaoAritmetica
+
+    TFPAR  shift, and go to state 135
+    TVIRG  shift, and go to state 130
+
+
+state 106
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica TADD TermoAritmetico .
+   62 TermoAritmetico: TermoAritmetico . TMUL FatorAritmetico
+   63                | TermoAritmetico . TDIV FatorAritmetico
+
+    TMUL  shift, and go to state 77
+    TDIV  shift, and go to state 78
+
+    $default  reduce using rule 59 (ExpressaoAritmetica)
+
+
+state 107
+
+   60 ExpressaoAritmetica: ExpressaoAritmetica TSUB TermoAritmetico .
+   62 TermoAritmetico: TermoAritmetico . TMUL FatorAritmetico
+   63                | TermoAritmetico . TDIV FatorAritmetico
+
+    TMUL  shift, and go to state 77
+    TDIV  shift, and go to state 78
+
+    $default  reduce using rule 60 (ExpressaoAritmetica)
+
+
+state 108
+
+   62 TermoAritmetico: TermoAritmetico TMUL FatorAritmetico .
+
+    $default  reduce using rule 62 (TermoAritmetico)
+
+
+state 109
+
+   63 TermoAritmetico: TermoAritmetico TDIV FatorAritmetico .
+
+    $default  reduce using rule 63 (TermoAritmetico)
+
+
+state 110
+
+   50 ComandoPRINT: TPRINT TAPAR M TLITERAL . TFPAR TPVIRG
+
+    TFPAR  shift, and go to state 136
+
+
+state 111
+
+   49 ComandoPRINT: TPRINT TAPAR M ExpressaoAritmetica . TFPAR TPVIRG
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+
+    TADD   shift, and go to state 74
+    TSUB   shift, and go to state 75
+    TFPAR  shift, and go to state 137
+
+
+state 112
+
+   52 ComandoREAD: TREAD TAPAR TID TFPAR . TPVIRG
+
+    TPVIRG  shift, and go to state 138
+
+
+state 113
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+   69 FatorAritmetico: TAPAR ExpressaoAritmetica . TFPAR
+   77 ExpressaoRelacional: ExpressaoAritmetica . TMAIOR ExpressaoAritmetica
+   78                    | ExpressaoAritmetica . TMENOR ExpressaoAritmetica
+   79                    | ExpressaoAritmetica . TMAIGUAL ExpressaoAritmetica
+   80                    | ExpressaoAritmetica . TMEIGUAL ExpressaoAritmetica
+   81                    | ExpressaoAritmetica . TIGUAL ExpressaoAritmetica
+   82                    | ExpressaoAritmetica . TDIFER ExpressaoAritmetica
+
+    TMEIGUAL  shift, and go to state 116
+    TMAIGUAL  shift, and go to state 117
+    TIGUAL    shift, and go to state 118
+    TDIFER    shift, and go to state 119
+    TMAIOR    shift, and go to state 120
+    TMENOR    shift, and go to state 121
+    TADD      shift, and go to state 74
+    TSUB      shift, and go to state 75
+    TFPAR     shift, and go to state 103
+
+
+state 114
+
+   70 ExpressaoLogica: ExpressaoLogica . TAND NL FatorLogico
+   71                | ExpressaoLogica . TOR NL FatorLogico
+   75 FatorLogico: TAPAR ExpressaoLogica . TFPAR
+
+    TFPAR  shift, and go to state 139
+    TAND   shift, and go to state 123
+    TOR    shift, and go to state 124
+
+
+state 115
+
+   74 FatorLogico: TNOT FatorLogico .
+
+    $default  reduce using rule 74 (FatorLogico)
+
+
+state 116
+
+   80 ExpressaoRelacional: ExpressaoAritmetica TMEIGUAL . ExpressaoAritmetica
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 140
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 117
+
+   79 ExpressaoRelacional: ExpressaoAritmetica TMAIGUAL . ExpressaoAritmetica
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 141
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 118
+
+   81 ExpressaoRelacional: ExpressaoAritmetica TIGUAL . ExpressaoAritmetica
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 142
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 119
+
+   82 ExpressaoRelacional: ExpressaoAritmetica TDIFER . ExpressaoAritmetica
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 143
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 120
+
+   77 ExpressaoRelacional: ExpressaoAritmetica TMAIOR . ExpressaoAritmetica
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 144
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 121
+
+   78 ExpressaoRelacional: ExpressaoAritmetica TMENOR . ExpressaoAritmetica
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 145
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 122
+
+   43 ComandoIF: TIF TAPAR ExpressaoLogica TFPAR . NL Bloco
+   44          | TIF TAPAR ExpressaoLogica TFPAR . NL Bloco N TELSE NL Bloco
+
+    $default  reduce using rule 73 (NL)
+
+    NL  go to state 146
+
+
+state 123
+
+   70 ExpressaoLogica: ExpressaoLogica TAND . NL FatorLogico
+
+    $default  reduce using rule 73 (NL)
+
+    NL  go to state 147
+
+
+state 124
+
+   71 ExpressaoLogica: ExpressaoLogica TOR . NL FatorLogico
+
+    $default  reduce using rule 73 (NL)
+
+    NL  go to state 148
+
+
+state 125
+
+   46 ComandoWHILE: TWHILE NL TAPAR ExpressaoLogica . TFPAR NL Bloco
+   70 ExpressaoLogica: ExpressaoLogica . TAND NL FatorLogico
+   71                | ExpressaoLogica . TOR NL FatorLogico
+
+    TFPAR  shift, and go to state 149
+    TAND   shift, and go to state 123
+    TOR    shift, and go to state 124
+
+
+state 126
+
+   48 ComandoAttrib: TID TATRIB TLITERAL TPVIRG .
+
+    $default  reduce using rule 48 (ComandoAttrib)
+
+
+state 127
+
+   47 ComandoAttrib: TID TATRIB ExpressaoAritmetica TPVIRG .
+
+    $default  reduce using rule 47 (ComandoAttrib)
+
+
+state 128
+
+   54 ChamadaFuncao: TID TAPAR TFPAR TPVIRG .
+
+    $default  reduce using rule 54 (ChamadaFuncao)
+
+
+state 129
+
+   53 ChamadaFuncao: TID TAPAR ListaParametros TFPAR . TPVIRG
+
+    TPVIRG  shift, and go to state 150
+
+
+state 130
+
+   57 ListaParametros: ListaParametros TVIRG . ExpressaoAritmetica
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 45
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 151
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+
+
+state 131
+
+   21 ListaId: ListaId TVIRG TID .
+
+    $default  reduce using rule 21 (ListaId)
+
+
+state 132
+
+   39 ComandoAdicao: CarregaID TINC_N ExpressaoAritmetica TPVIRG .
+
+    $default  reduce using rule 39 (ComandoAdicao)
+
+
+state 133
+
+   40 ComandoSubtracao: CarregaID TDEC_N ExpressaoAritmetica TPVIRG .
+
+    $default  reduce using rule 40 (ComandoSubtracao)
+
+
+state 134
+
+   12 DeclaracaoParametros: DeclaracaoParametros TVIRG Tipo . TID
+
+    TID  shift, and go to state 152
+
+
+state 135
+
+   55 ChamadaFuncaoSemPVIRG: TID TAPAR ListaParametros TFPAR .
+
+    $default  reduce using rule 55 (ChamadaFuncaoSemPVIRG)
+
+
+state 136
+
+   50 ComandoPRINT: TPRINT TAPAR M TLITERAL TFPAR . TPVIRG
+
+    TPVIRG  shift, and go to state 153
+
+
+state 137
+
+   49 ComandoPRINT: TPRINT TAPAR M ExpressaoAritmetica TFPAR . TPVIRG
+
+    TPVIRG  shift, and go to state 154
+
+
+state 138
+
+   52 ComandoREAD: TREAD TAPAR TID TFPAR TPVIRG .
+
+    $default  reduce using rule 52 (ComandoREAD)
+
+
+state 139
+
+   75 FatorLogico: TAPAR ExpressaoLogica TFPAR .
+
+    $default  reduce using rule 75 (FatorLogico)
+
+
+state 140
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+   80 ExpressaoRelacional: ExpressaoAritmetica TMEIGUAL ExpressaoAritmetica .
+
+    TADD  shift, and go to state 74
+    TSUB  shift, and go to state 75
+
+    $default  reduce using rule 80 (ExpressaoRelacional)
+
+
+state 141
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+   79 ExpressaoRelacional: ExpressaoAritmetica TMAIGUAL ExpressaoAritmetica .
+
+    TADD  shift, and go to state 74
+    TSUB  shift, and go to state 75
+
+    $default  reduce using rule 79 (ExpressaoRelacional)
+
+
+state 142
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+   81 ExpressaoRelacional: ExpressaoAritmetica TIGUAL ExpressaoAritmetica .
+
+    TADD  shift, and go to state 74
+    TSUB  shift, and go to state 75
+
+    $default  reduce using rule 81 (ExpressaoRelacional)
+
+
+state 143
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+   82 ExpressaoRelacional: ExpressaoAritmetica TDIFER ExpressaoAritmetica .
+
+    TADD  shift, and go to state 74
+    TSUB  shift, and go to state 75
+
+    $default  reduce using rule 82 (ExpressaoRelacional)
+
+
+state 144
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+   77 ExpressaoRelacional: ExpressaoAritmetica TMAIOR ExpressaoAritmetica .
+
+    TADD  shift, and go to state 74
+    TSUB  shift, and go to state 75
+
+    $default  reduce using rule 77 (ExpressaoRelacional)
+
+
+state 145
+
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+   78 ExpressaoRelacional: ExpressaoAritmetica TMENOR ExpressaoAritmetica .
+
+    TADD  shift, and go to state 74
+    TSUB  shift, and go to state 75
+
+    $default  reduce using rule 78 (ExpressaoRelacional)
+
+
+state 146
+
+   43 ComandoIF: TIF TAPAR ExpressaoLogica TFPAR NL . Bloco
+   44          | TIF TAPAR ExpressaoLogica TFPAR NL . Bloco N TELSE NL Bloco
+
+    TACHAVE  shift, and go to state 155
+
+    Bloco  go to state 156
+
+
+state 147
+
+   70 ExpressaoLogica: ExpressaoLogica TAND NL . FatorLogico
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 81
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+    TNOT   shift, and go to state 82
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 83
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+    FatorLogico            go to state 157
+    ExpressaoRelacional    go to state 86
+
+
+state 148
+
+   71 ExpressaoLogica: ExpressaoLogica TOR NL . FatorLogico
+
+    TSUB   shift, and go to state 44
+    TAPAR  shift, and go to state 81
+    TNUM   shift, and go to state 46
+    TID    shift, and go to state 47
+    TNOT   shift, and go to state 82
+
+    ChamadaFuncaoSemPVIRG  go to state 48
+    ExpressaoAritmetica    go to state 83
+    TermoAritmetico        go to state 50
+    FatorAritmetico        go to state 51
+    FatorLogico            go to state 158
+    ExpressaoRelacional    go to state 86
+
+
+state 149
+
+   46 ComandoWHILE: TWHILE NL TAPAR ExpressaoLogica TFPAR . NL Bloco
+
+    $default  reduce using rule 73 (NL)
+
+    NL  go to state 159
+
+
+state 150
+
+   53 ChamadaFuncao: TID TAPAR ListaParametros TFPAR TPVIRG .
+
+    $default  reduce using rule 53 (ChamadaFuncao)
+
+
+state 151
+
+   57 ListaParametros: ListaParametros TVIRG ExpressaoAritmetica .
+   59 ExpressaoAritmetica: ExpressaoAritmetica . TADD TermoAritmetico
+   60                    | ExpressaoAritmetica . TSUB TermoAritmetico
+
+    TADD  shift, and go to state 74
+    TSUB  shift, and go to state 75
+
+    $default  reduce using rule 57 (ListaParametros)
+
+
+state 152
+
+   12 DeclaracaoParametros: DeclaracaoParametros TVIRG Tipo TID .
+
+    $default  reduce using rule 12 (DeclaracaoParametros)
+
+
+state 153
+
+   50 ComandoPRINT: TPRINT TAPAR M TLITERAL TFPAR TPVIRG .
+
+    $default  reduce using rule 50 (ComandoPRINT)
+
+
+state 154
+
+   49 ComandoPRINT: TPRINT TAPAR M ExpressaoAritmetica TFPAR TPVIRG .
+
+    $default  reduce using rule 49 (ComandoPRINT)
+
+
+state 155
+
+   23 Bloco: TACHAVE . ListaComandos TFCHAVE
+
+    TRETURN  shift, and go to state 19
+    TPRINT   shift, and go to state 20
+    TREAD    shift, and go to state 21
+    TIF      shift, and go to state 22
+    TWHILE   shift, and go to state 23
+    TID      shift, and go to state 24
+
+    ListaComandos       go to state 160
+    Comando             go to state 29
+    ComandoADDUnitario  go to state 30
+    ComandoSUBUnitario  go to state 31
+    ComandoAdicao       go to state 32
+    ComandoSubtracao    go to state 33
+    CarregaID           go to state 34
+    Retorno             go to state 35
+    ComandoIF           go to state 36
+    ComandoWHILE        go to state 37
+    ComandoAttrib       go to state 38
+    ComandoPRINT        go to state 39
+    ComandoREAD         go to state 40
+    ChamadaFuncao       go to state 41
+
+
+state 156
+
+   43 ComandoIF: TIF TAPAR ExpressaoLogica TFPAR NL Bloco .
+   44          | TIF TAPAR ExpressaoLogica TFPAR NL Bloco . N TELSE NL Bloco
+
+    TELSE     reduce using rule 45 (N)
+    $default  reduce using rule 43 (ComandoIF)
+
+    N  go to state 161
+
+
+state 157
+
+   70 ExpressaoLogica: ExpressaoLogica TAND NL FatorLogico .
+
+    $default  reduce using rule 70 (ExpressaoLogica)
+
+
+state 158
+
+   71 ExpressaoLogica: ExpressaoLogica TOR NL FatorLogico .
+
+    $default  reduce using rule 71 (ExpressaoLogica)
+
+
+state 159
+
+   46 ComandoWHILE: TWHILE NL TAPAR ExpressaoLogica TFPAR NL . Bloco
+
+    TACHAVE  shift, and go to state 155
+
+    Bloco  go to state 162
+
+
+state 160
+
+   23 Bloco: TACHAVE ListaComandos . TFCHAVE
+   24 ListaComandos: ListaComandos . Comando
+
+    TRETURN  shift, and go to state 19
+    TPRINT   shift, and go to state 20
+    TREAD    shift, and go to state 21
+    TIF      shift, and go to state 22
+    TWHILE   shift, and go to state 23
+    TFCHAVE  shift, and go to state 163
+    TID      shift, and go to state 24
+
+    Comando             go to state 65
+    ComandoADDUnitario  go to state 30
+    ComandoSUBUnitario  go to state 31
+    ComandoAdicao       go to state 32
+    ComandoSubtracao    go to state 33
+    CarregaID           go to state 34
+    Retorno             go to state 35
+    ComandoIF           go to state 36
+    ComandoWHILE        go to state 37
+    ComandoAttrib       go to state 38
+    ComandoPRINT        go to state 39
+    ComandoREAD         go to state 40
+    ChamadaFuncao       go to state 41
+
+
+state 161
+
+   44 ComandoIF: TIF TAPAR ExpressaoLogica TFPAR NL Bloco N . TELSE NL Bloco
+
+    TELSE  shift, and go to state 164
+
+
+state 162
+
+   46 ComandoWHILE: TWHILE NL TAPAR ExpressaoLogica TFPAR NL Bloco .
+
+    $default  reduce using rule 46 (ComandoWHILE)
+
+
+state 163
+
+   23 Bloco: TACHAVE ListaComandos TFCHAVE .
+
+    $default  reduce using rule 23 (Bloco)
+
+
+state 164
+
+   44 ComandoIF: TIF TAPAR ExpressaoLogica TFPAR NL Bloco N TELSE . NL Bloco
+
+    $default  reduce using rule 73 (NL)
+
+    NL  go to state 165
+
+
+state 165
+
+   44 ComandoIF: TIF TAPAR ExpressaoLogica TFPAR NL Bloco N TELSE NL . Bloco
+
+    TACHAVE  shift, and go to state 155
+
+    Bloco  go to state 166
+
+
+state 166
+
+   44 ComandoIF: TIF TAPAR ExpressaoLogica TFPAR NL Bloco N TELSE NL Bloco .
+
+    $default  reduce using rule 44 (ComandoIF)

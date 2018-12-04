@@ -1,5 +1,0 @@
-/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-minsizerel/CMakeFiles/rebuild_cache.dir
-/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-minsizerel/CMakeFiles/edit_cache.dir
-/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-minsizerel/CMakeFiles/TrabalhoFinal.dir
-/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-minsizerel/CMakeFiles/main.dir
-/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-minsizerel/CMakeFiles/clearBisonAndFlex.dir

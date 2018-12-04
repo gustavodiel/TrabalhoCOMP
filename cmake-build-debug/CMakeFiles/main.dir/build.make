@@ -43,10 +43,10 @@ RM = "/Users/gustavo/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP
+CMAKE_SOURCE_DIR = /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -57,94 +57,94 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-../gram.tab.c:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BISON: Criando gram.tab.c"
-	/usr/bin/bison -d --output=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.y
+../expr.tab.c:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "BISON: Criando expr.tab.c"
+	/usr/bin/bison -d --output=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.tab.c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.y
 
-CMakeFiles/main.dir/Initializers.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Initializers.c.o: ../Initializers.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/Initializers.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/Initializers.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/Initializers.c
+CMakeFiles/main.dir/expr.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/expr.c.o: ../expr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/main.dir/expr.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/expr.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.c
 
-CMakeFiles/main.dir/Initializers.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/Initializers.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/Initializers.c > CMakeFiles/main.dir/Initializers.c.i
+CMakeFiles/main.dir/expr.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/expr.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.c > CMakeFiles/main.dir/expr.c.i
 
-CMakeFiles/main.dir/Initializers.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/Initializers.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/Initializers.c -o CMakeFiles/main.dir/Initializers.c.s
+CMakeFiles/main.dir/expr.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/expr.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.c -o CMakeFiles/main.dir/expr.c.s
 
-CMakeFiles/main.dir/Boolean.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Boolean.c.o: ../Boolean.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/Boolean.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/Boolean.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/Boolean.c
+CMakeFiles/main.dir/expr.tab.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/expr.tab.c.o: ../expr.tab.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/main.dir/expr.tab.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/expr.tab.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.tab.c
 
-CMakeFiles/main.dir/Boolean.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/Boolean.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/Boolean.c > CMakeFiles/main.dir/Boolean.c.i
+CMakeFiles/main.dir/expr.tab.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/expr.tab.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.tab.c > CMakeFiles/main.dir/expr.tab.c.i
 
-CMakeFiles/main.dir/Boolean.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/Boolean.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/Boolean.c -o CMakeFiles/main.dir/Boolean.c.s
+CMakeFiles/main.dir/expr.tab.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/expr.tab.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/expr.tab.c -o CMakeFiles/main.dir/expr.tab.c.s
 
-CMakeFiles/main.dir/Helpers.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Helpers.c.o: ../Helpers.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.dir/Helpers.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/Helpers.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/Helpers.c
+CMakeFiles/main.dir/Main.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Main.c.o: ../Main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/main.dir/Main.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/Main.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/Main.c
 
-CMakeFiles/main.dir/Helpers.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/Helpers.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/Helpers.c > CMakeFiles/main.dir/Helpers.c.i
+CMakeFiles/main.dir/Main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/Main.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/Main.c > CMakeFiles/main.dir/Main.c.i
 
-CMakeFiles/main.dir/Helpers.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/Helpers.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/Helpers.c -o CMakeFiles/main.dir/Helpers.c.s
+CMakeFiles/main.dir/Main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/Main.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/Main.c -o CMakeFiles/main.dir/Main.c.s
 
-CMakeFiles/main.dir/gram.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/gram.c.o: ../gram.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/main.dir/gram.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/gram.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.c
+CMakeFiles/main.dir/Lista.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/Lista.c.o: ../Lista.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/main.dir/Lista.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/Lista.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/Lista.c
 
-CMakeFiles/main.dir/gram.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/gram.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.c > CMakeFiles/main.dir/gram.c.i
+CMakeFiles/main.dir/Lista.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/Lista.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/Lista.c > CMakeFiles/main.dir/Lista.c.i
 
-CMakeFiles/main.dir/gram.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/gram.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.c -o CMakeFiles/main.dir/gram.c.s
+CMakeFiles/main.dir/Lista.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/Lista.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/Lista.c -o CMakeFiles/main.dir/Lista.c.s
 
-CMakeFiles/main.dir/gram.tab.c.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/gram.tab.c.o: ../gram.tab.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/main.dir/gram.tab.c.o"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/gram.tab.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c
+CMakeFiles/main.dir/ListHandlers.c.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/ListHandlers.c.o: ../ListHandlers.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/main.dir/ListHandlers.c.o"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/main.dir/ListHandlers.c.o   -c /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/ListHandlers.c
 
-CMakeFiles/main.dir/gram.tab.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/gram.tab.c.i"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c > CMakeFiles/main.dir/gram.tab.c.i
+CMakeFiles/main.dir/ListHandlers.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/main.dir/ListHandlers.c.i"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/ListHandlers.c > CMakeFiles/main.dir/ListHandlers.c.i
 
-CMakeFiles/main.dir/gram.tab.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/gram.tab.c.s"
-	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/gram.tab.c -o CMakeFiles/main.dir/gram.tab.c.s
+CMakeFiles/main.dir/ListHandlers.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/main.dir/ListHandlers.c.s"
+	/Library/Developer/CommandLineTools/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/ListHandlers.c -o CMakeFiles/main.dir/ListHandlers.c.s
 
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/Initializers.c.o" \
-"CMakeFiles/main.dir/Boolean.c.o" \
-"CMakeFiles/main.dir/Helpers.c.o" \
-"CMakeFiles/main.dir/gram.c.o" \
-"CMakeFiles/main.dir/gram.tab.c.o"
+"CMakeFiles/main.dir/expr.c.o" \
+"CMakeFiles/main.dir/expr.tab.c.o" \
+"CMakeFiles/main.dir/Main.c.o" \
+"CMakeFiles/main.dir/Lista.c.o" \
+"CMakeFiles/main.dir/ListHandlers.c.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main: CMakeFiles/main.dir/Initializers.c.o
-main: CMakeFiles/main.dir/Boolean.c.o
-main: CMakeFiles/main.dir/Helpers.c.o
-main: CMakeFiles/main.dir/gram.c.o
-main: CMakeFiles/main.dir/gram.tab.c.o
+main: CMakeFiles/main.dir/expr.c.o
+main: CMakeFiles/main.dir/expr.tab.c.o
+main: CMakeFiles/main.dir/Main.c.o
+main: CMakeFiles/main.dir/Lista.c.o
+main: CMakeFiles/main.dir/ListHandlers.c.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -156,7 +156,7 @@ CMakeFiles/main.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/main.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/main.dir/clean
 
-CMakeFiles/main.dir/depend: ../gram.tab.c
-	cd /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug /Users/gustavo/Documents/workspace/udesc/comp/TrabalhoCOMP/cmake-build-debug/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+CMakeFiles/main.dir/depend: ../expr.tab.c
+	cd /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug /Users/gustavo/Documents/workspace/udesc/comp/CompiladorFinal/cmake-build-debug/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 
