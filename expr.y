@@ -40,6 +40,10 @@ FuncaoGeral:
             printf("Funcao %s sem retorno!\n", $1.id);
             exit(-2);
         }
+        if($1.tipo != $2.tipo){
+            printf("Retorno da funcao %s incorreto!\n", $1.id);
+            exit(-2);
+        }
         CreateFunctionBody();
     }
     ;
@@ -79,15 +83,19 @@ DeclaracaoParametros:
 BlocoPrincipal:
     TACHAVE Declaracoes ListaComandos Retorno TFCHAVE {
         $$.semRetorno = 0;
+        $$.tipo = $4.tipo;
     }
     | TACHAVE ListaComandos Retorno TFCHAVE {
         $$.semRetorno = 0;
+        $$.tipo = $4.tipo;
     }
     | TACHAVE Declaracoes ListaComandos TFCHAVE {
         $$.semRetorno = 1;
+        $$.tipo = TIPO_VOID;
     }
     | TACHAVE ListaComandos TFCHAVE {
         $$.semRetorno = 1;
+        $$.tipo = TIPO_VOID;
     }
     ;
 
@@ -181,6 +189,7 @@ CarregaID:
 Retorno:
     TRETURN ExpressaoAritmetica TPVIRG {
         CreateReturn($2.tipo);
+        $$.tipo = $2.tipo;
     }
     ;
 
