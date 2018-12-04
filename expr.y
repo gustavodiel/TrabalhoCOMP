@@ -36,15 +36,23 @@ ListaFuncoes:
 
 FuncaoGeral:
     Funcao BlocoPrincipal {
+        if($2.semRetorno == 1 && $1.tipo != TIPO_VOID){
+            printf("Funcao %s sem retorno!\n", $1.id);
+            exit(-2);
+        }
         CreateFunctionBody();
     }
     ;
 
 Funcao:
     TipoRetorno TID TAPAR DeclaracaoParametros TFPAR {
+        strcpy($$.id, $2.id);
+        $$.tipo = $1.tipo;
         CreateFunctionWithParameter(&($4.listaParametros), $1.tipo, $2.id);
     }
     | TipoRetorno TID TAPAR TFPAR {
+        strcpy($$.id, $2.id);
+        $$.tipo = $1.tipo;
         CreateFunctionWithoutParameter($1.tipo, $2.id);
     }
     ;
@@ -69,8 +77,18 @@ DeclaracaoParametros:
     ;
 
 BlocoPrincipal:
-    TACHAVE Declaracoes ListaComandos TFCHAVE
-    | TACHAVE ListaComandos TFCHAVE
+    TACHAVE Declaracoes ListaComandos Retorno TFCHAVE {
+        $$.semRetorno = 0;
+    }
+    | TACHAVE ListaComandos Retorno TFCHAVE {
+        $$.semRetorno = 0;
+    }
+    | TACHAVE Declaracoes ListaComandos TFCHAVE {
+        $$.semRetorno = 1;
+    }
+    | TACHAVE ListaComandos TFCHAVE {
+        $$.semRetorno = 1;
+    }
     ;
 
 Declaracoes:
@@ -123,7 +141,6 @@ Comando:
     | ComandoSUBUnitario
     | ComandoAdicao
     | ComandoSubtracao
-    | Retorno
     ;
 
 ComandoADDUnitario:
